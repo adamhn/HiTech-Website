@@ -1,3 +1,76 @@
+/*------------------------*/
+/* BASIC SETUP */
+/*------------------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 html {
-  color: red;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: #fff;
+}
+
+/*------------------------*/
+/* REUSABLE COMPONENTS */
+/*------------------------*/
+
+/*------------------------*/
+/* HEADER */
+/*------------------------*/
+
+/*------------------------*/
+/* SLIDESHOW SECTION */
+/*------------------------*/
+
+/*------------------------*/
+/* TEAM SECTION */
+/*------------------------*/
+
+/*------------------------*/
+/* PROJECTS SECTION */
+/*------------------------*/
+
+/*------------------------*/
+/* CONTACT US SECTION */
+/*------------------------*/
+
+/*------------------------*/
+/* FOOTER */
+/*------------------------*/
+
+/*------------------------*/
+/* MEDIA QUERIES */
+/*------------------------*/
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  /* body {
+    background-color: #dcdcdc;
+  } */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* body {
+    background-color: #c8c8c8;
+  } */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* body {
+    background-color: #a9a9a9;
+  } */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* body {
+    background-color: #808080;
+  } */
 }
