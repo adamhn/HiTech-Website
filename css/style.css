@@ -1,3 +1,7 @@
+/* OUR COLORS
+Primary black: #010101;
+*/
+
 /*------------------------*/
 /* BASIC SETUP */
 /*------------------------*/
@@ -19,14 +23,76 @@ body {
 /*------------------------*/
 /* REUSABLE COMPONENTS */
 /*------------------------*/
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* ----- HEADINGS ----- */
+/* ----- PARAGRAPHS ----- */
+/* ----- LINKS ----- */
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #010101;
+}
+
+a:hover,
+a:active {
+  opacity: 0.6;
+}
 
 /*------------------------*/
 /* HEADER */
 /*------------------------*/
+.navigation-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 25px auto;
+}
+
+.logotype {
+  margin: auto 0px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 125%;
+  color: #fff;
+  padding: 10px;
+  background-color: #010101;
+  border-radius: 6px;
+  cursor: default;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  justify-self: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  padding-left: 20px;
+}
+
+.nav-item .link {
+  font-size: 90%;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav-item .link:hover,
+.nav-item .link:active {
+  opacity: 0.5;
+}
 
 /*------------------------*/
 /* SLIDESHOW SECTION */
 /*------------------------*/
+#slideshow-section {
+}
 
 /*------------------------*/
 /* TEAM SECTION */
@@ -48,29 +114,17 @@ body {
 /* MEDIA QUERIES */
 /*------------------------*/
 /* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-  /* body {
-    background-color: #dcdcdc;
-  } */
+@media (max-width: 576px) {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  /* body {
-    background-color: #c8c8c8;
-  } */
+@media (max-width: 768px) {
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  /* body {
-    background-color: #a9a9a9;
-  } */
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  /* body {
-    background-color: #808080;
-  } */
 }
