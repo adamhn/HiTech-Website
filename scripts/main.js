@@ -10,7 +10,7 @@
   let slideIndex = 0;
   let slideTimer = 4000; // Number of milliseconds for next slide
 
-  // Set play pause initial visibility
+  // Initial visibility for play pause icons
   playIcon.style.display = "none";
   pauseIcon.style.display = "block";
 
@@ -21,15 +21,15 @@
   // Methods
   //
   // Shows a slide at a given index from the DOM elements with class name slide
-  function continueSlider(n) {
+  function continueSlider(atIndex) {
     var i;
     var slides = document.getElementsByClassName("slide");
 
-    if (n > slides.length) {
+    if (atIndex > slides.length) {
       slideIndex = 1;
     }
 
-    if (n < 1) {
+    if (atIndex < 1) {
       slideIndex = slides.length;
     }
 
@@ -46,6 +46,7 @@
     timer = setTimeout(continueSlider, slideTimer); // Change image every 2 seconds
   }
 
+  // Toggles between pause and play icon visibility
   function togglePausePlay() {
     if (playIcon.style.display === "block") {
       playIcon.style.display = "none";
@@ -92,56 +93,15 @@
     slides[slideIndex - 1].style.display = "block";
   }
 
-  // function prevSlide() {
-  //   var slides = document.getElementsByClassName("slide");
-
-  //   stopSlider();
-
-  //   if (slideIndex == 1) {
-  //     slideIndex = slides.length;
-  //   } else {
-  //     slideIndex = slideIndex - 1;
-  //   }
-
-  //   for (i = 0; i < slides.length; i++) {
-  //     slides[i].style.display = "none";
-  //   }
-
-  //   slides[slideIndex - 1].style.display = "block";
-  // }
-
-  // function nextSlide() {
-  //   var slides = document.getElementsByClassName("slide");
-
-  //   stopSlider();
-
-  //   if (slideIndex == slides.length) {
-  //     slideIndex = 1;
-  //   } else {
-  //     slideIndex = slideIndex + 1;
-  //   }
-
-  //   for (i = 0; i < slides.length; i++) {
-  //     slides[i].style.display = "none";
-  //   }
-
-  //   slides[slideIndex - 1].style.display = "block";
-  // }
-
   //
   // Inits & Event Listeners
   //
   prevEl.addEventListener("click", function () {
-    // prevSlide();
     nextPrevSlider(true);
-    // nextPressed = true;
-    // showSlides((slideIndex += -1));
   });
+
   nextEl.addEventListener("click", function () {
-    // nextSlide();
     nextPrevSlider(false);
-    // prevPressed = true;
-    // showSlides((slideIndex += 1));
   });
 
   playIcon.addEventListener("click", () => {
