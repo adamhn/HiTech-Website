@@ -6,38 +6,35 @@
   let nextEl = document.querySelector(".next");
   let playIcon = document.querySelector(".play-icon");
   let pauseIcon = document.querySelector(".pause-icon");
+  let slides = document.getElementsByClassName("slide");
 
   let slideIndex = 0;
   let slideTimer = 4000; // Number of milliseconds for next slide
 
-  // Initial visibility for play pause icons
-  playIcon.style.display = "none";
-  pauseIcon.style.display = "block";
-
-  // Calling show slides initially to present the first slider
-  continueSlider(slideIndex);
+  init();
 
   //
   // Methods
   //
+  function init() {
+    // Initial visibility for play pause icons
+    playIcon.style.display = "none";
+    pauseIcon.style.display = "block";
+
+    // Calling show slides initially to present the first slider
+    continueSlider();
+    randomiseSkillsProgress();
+  }
+
   // Shows a slide at a given index from the DOM elements with class name slide
-  function continueSlider(atIndex) {
-    var i;
-    var slides = document.getElementsByClassName("slide");
-
-    if (atIndex > slides.length) {
-      slideIndex = 1;
-    }
-
-    if (atIndex < 1) {
-      slideIndex = slides.length;
-    }
-
-    for (i = 0; i < slides.length; i++) {
+  function continueSlider() {
+    for (var i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
 
-    slideIndex++;
+    slideIndex++; // Increment to display new slider
+
+    // Reset if we reached the last slide
     if (slideIndex > slides.length) {
       slideIndex = 1;
     }
@@ -69,8 +66,6 @@
 
   // +1 for next slider, -1 for previous slider
   function nextPrevSlider(isPrev) {
-    var slides = document.getElementsByClassName("slide");
-
     stopSlider();
 
     // Checks to see wether we pressed the prev or next slider
@@ -93,14 +88,24 @@
     slides[slideIndex - 1].style.display = "block";
   }
 
+  function randomiseSkillsProgress() {
+    let progresses = document.querySelectorAll(".progress");
+    progresses.forEach((progress) => {
+      let randomNumber = Math.floor(Math.random() * (101 - 60)) + 60;
+
+      progress.textContent = randomNumber + "%";
+      progress.style.width = randomNumber + "%";
+    });
+  }
+
   //
   // Inits & Event Listeners
   //
-  prevEl.addEventListener("click", function () {
+  prevEl.addEventListener("click", () => {
     nextPrevSlider(true);
   });
 
-  nextEl.addEventListener("click", function () {
+  nextEl.addEventListener("click", () => {
     nextPrevSlider(false);
   });
 
