@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>HiTech Team - Vi bygger hög kvalitets mjukvaruprodukter</title>
@@ -16,6 +16,11 @@
     />
     <script
       src="https://kit.fontawesome.com/35072bc560.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
   </head>
@@ -45,7 +50,25 @@
       <section id="slideshow-section">
         <div class="slideshow-container">
           <div class="slide fade">
-            <img src="assets/slides/slide-image1.jpg" class="slide-image" />
+            <img
+              src="assets/slides/slide-image1.jpg"
+              class="slide-image"
+              alt="bild"
+            />
+            <div class="slide-text-container">
+              <h1 class="slide-heading">Välkommen till HiTech Team</h1>
+              <p class="slide-paragraph">
+                Högsta kvalitet av mjukvaruprodukter
+              </p>
+            </div>
+          </div>
+
+          <div class="slide fade">
+            <img
+              src="assets/slides/slide-image2.jpg"
+              class="slide-image"
+              alt="bild"
+            />
             <div class="slide-text-container">
               <div class="slide-heading">Välkommen till HiTech Team</div>
               <p class="slide-paragraph">
@@ -55,17 +78,11 @@
           </div>
 
           <div class="slide fade">
-            <img src="assets/slides/slide-image2.jpg" class="slide-image" />
-            <div class="slide-text-container">
-              <div class="slide-heading">Välkommen till HiTech Team</div>
-              <p class="slide-paragraph">
-                Högsta kvalitet av mjukvaruprodukter
-              </p>
-            </div>
-          </div>
-
-          <div class="slide fade">
-            <img src="assets/slides/slide-image3.jpg" class="slide-image" />
+            <img
+              src="assets/slides/slide-image3.jpg"
+              class="slide-image"
+              alt="bild"
+            />
             <div class="slide-text-container">
               <div class="slide-heading">Välkommen till HiTech Team</div>
               <p class="slide-paragraph">
@@ -81,9 +98,7 @@
           <i class="fas fa-pause pause-icon"></i>
         </div>
       </section>
-
-      <section id="team-section"></section>
-      <section id="projects-section" class="projects-section">
+      <section id="team-section" class="team-section">
         <div class="container">
           <div class="intro-box">
             <h2>Vilka vi är</h2>
@@ -140,17 +155,19 @@
                 </div>
               </div>
 
-              <a href="/member1">Presentationssida</a>
+              <a class="presentation-link" href="members/member-1.html"
+                >Presentationssida</a
+              >
             </div>
             <div class="member">
               <a href="#">
                 <img
-                  src="assets/team/person1.jpg"
+                  src="assets/team/person2.jpg"
                   class="member-image"
                   alt="team member image"
                 />
               </a>
-              <h3 class="member-name">Petey Cruiser</h3>
+              <h3 class="member-name">Tom Crusie</h3>
 
               <div class="progress-section">
                 <h4 class="skill-heading">Skills</h4>
@@ -183,17 +200,19 @@
                 </div>
               </div>
 
-              <a href="/member1">Presentationssida</a>
+              <a class="presentation-link" href="members/member-2.html"
+                >Presentationssida</a
+              >
             </div>
             <div class="member">
               <a href="#">
                 <img
-                  src="assets/team/person1.jpg"
+                  src="assets/team/person3.jpg"
                   class="member-image"
                   alt="team member image"
                 />
               </a>
-              <h3 class="member-name">Petey Cruiser</h3>
+              <h3 class="member-name">Nikola Tesla</h3>
 
               <div class="progress-section">
                 <h4 class="skill-heading">Skills</h4>
@@ -226,15 +245,160 @@
                 </div>
               </div>
 
-              <a href="/member1">Presentationssida</a>
+              <a class="presentation-link" href="members/member-3.html"
+                >Presentationssida</a
+              >
             </div>
           </div>
         </div>
       </section>
-      <section id="contactus-section"></section>
+      <section id="projects-section" class="projects-section">
+        <div class="container">
+          <h2 class="projects-section-title">Våra projekt</h2>
+          <div class="projects-container">
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/1.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">apple.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/2.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">ebay.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/3.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">amazon.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/4.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">dustin.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/5.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">hm.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/6.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">google.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/7.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">gmail.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/8.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">dropbox.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/9.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">adobe.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/10.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">whatsapp.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/11.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">dontbantiktok.com</a></h3>
+            </div>
+            <div class="project-box">
+              <img
+                class="project-image"
+                src="assets/projects/12.png"
+                alt="bild"
+              />
+              <h3><a class="project-link" href="#">terminal.com</a></h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contactus-section" class="contactus-section">
+        <div class="container">
+          <h2 class="contact-us-title">Kontakta Oss</h2>
+          <form class="contact-us-form">
+            <p class="error-message name-error">
+              För- och efternamnet får inte vara tomt.
+            </p>
+            <input
+              class="text-input"
+              type="text"
+              placeholder="För- och efternamn"
+            />
+            <p class="error-message email-error">
+              Kontrollera formatet på e-postadressen.
+            </p>
+            <input class="email-input" type="text" placeholder="E-postadress" />
+            <p class="error-message phone-error">
+              Kontrollera fromatet på telefonnumret.
+            </p>
+            <input
+              class="tel-input"
+              type="text"
+              placeholder="Telefonnummer (10 siffror)"
+            />
+            <p class="error-message textarea-error">
+              Meddelandet får inte vara tomt.
+            </p>
+            <textarea
+              class="textarea-input"
+              placeholder="Meddelande"
+            ></textarea>
+
+            <button class="submit-button" type="submit">Skicka</button>
+          </form>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer-section container">
+      <p class="copyright-text">
+        Copyright © 2020 Grupp HiTech Alla rättigheter förbehålls.
+      </p>
+    </footer>
     <script src="scripts/main.js"></script>
+    <script src="scripts/animate.js"></script>
   </body>
 </html>

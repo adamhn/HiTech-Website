@@ -15,7 +15,7 @@ body {
   background-color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  letter-spacing: 0.02;
+  letter-spacing: 0.02em;
 }
 
 /*------------------------*/
@@ -104,7 +104,6 @@ a:hover {
 .nav-items {
   display: flex;
   list-style: none;
-  justify-self: space-between;
   align-items: center;
 }
 
@@ -217,9 +216,8 @@ a:hover {
 /*------------------------*/
 /* TEAM SECTION */
 /*------------------------*/
-.projects-section {
+.team-section {
   padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .intro-box {
@@ -278,20 +276,181 @@ a:hover {
 /*------------------------*/
 /* PROJECTS SECTION */
 /*------------------------*/
+.projects-section {
+  margin: auto;
+}
+
+.projects-section-title {
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 60px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+}
+
+.project-box {
+  max-width: 25%;
+  flex: 25%;
+  padding: 0 8px;
+}
+
+.project-image {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.project-link {
+  text-align: center;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
 
 /*------------------------*/
 /* CONTACT US SECTION */
 /*------------------------*/
+.contactus-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: auto;
+  background-color: #f1f1f1;
+}
+
+.contact-us-title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 20px 20px;
+  border: 2px solid #d2d2d7;
+}
+
+textarea {
+  padding: 20px 20px 60px 20px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #000;
+}
+
+.submit-button {
+  padding: 10px 45px;
+  display: block;
+  margin-right: 0px;
+  margin-left: auto;
+  border-radius: 6px;
+  background-color: #000;
+  transition: opacity 0.1s;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.submit-button:hover {
+  opacity: 0.7;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 10px;
+  display: none;
+}
 
 /*------------------------*/
 /* FOOTER */
 /*------------------------*/
+.footer-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.copyright-text {
+  font-weight: 300;
+  color: #000;
+  opacity: 0.6;
+  text-align: center;
+  font-size: 14px;
+}
+
+/*------------------------*/
+/* MEMBER PAGE */
+/*------------------------*/
+.member-page-heading {
+  background-color: #f1f1f1;
+  padding: 60px 0px;
+}
+
+.member-page-heading-text {
+  text-align: center;
+}
+
+.member-page-section {
+  margin: 80px auto;
+  display: flex;
+}
+
+.member-page-section .progress-section {
+  margin-top: 40px;
+}
+
+.member-page-section .two-third-column {
+  width: 65%;
+}
+
+.member-page-section .one-third-column {
+  width: 30%;
+  margin-left: 5%;
+  margin-top: -5%;
+}
+
+.member-page-name {
+  margin-bottom: 30px;
+}
+
+.member-page-paragraph {
+  margin-bottom: 20px;
+}
+
+.presentation-link {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
 
 /*------------------------*/
 /* MEDIA QUERIES */
 /*------------------------*/
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
+  /*------------------------*/
+  /* PROJECTS SECTION */
+  /*------------------------*/
+  .project-box {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -307,6 +466,19 @@ a:hover {
   .team-members {
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /*------------------------*/
+  /* PROJECTS SECTION */
+  /*------------------------*/
+  .project-box {
+    flex: 50%;
+    max-width: 50%;
   }
 }
 
@@ -325,6 +497,28 @@ a:hover {
 
   .member {
     flex-basis: 48%;
+  }
+
+  /*------------------------*/
+  /* PROJECTS SECTION */
+  /*------------------------*/
+
+  /*------------------------*/
+  /* MEMBER PAGE */
+  /*------------------------*/
+  .member-page-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .member-page-section .two-third-column {
+    width: 100%;
+  }
+
+  .member-page-section .one-third-column {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
   }
 }
 
