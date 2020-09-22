@@ -81,6 +81,55 @@ a:hover {
 /*------------------------*/
 /* HEADER */
 /*------------------------*/
+/*HAMBURGER MENU*/
+/* Style the navigation menu */
+.mobile-navigation {
+  overflow: hidden;
+  position: relative;
+  margin: 40px auto;
+}
+
+.mobile-navigation .logotype {
+  max-width: 230px;
+}
+
+.mobile-navigation-icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #000;
+  border-radius: 6px;
+}
+
+.mobile-navigation-icon i {
+  color: #fff;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.mobile-navigation .mobile-navigation-links {
+  display: none;
+}
+
+/* Style navigation menu links */
+.mobile-navigation a {
+  color: #000;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Add a grey background color on mouse-over */
+.mobile-navigation .mobile-navigation-icon:hover {
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.mobile-navigation .mobile-navigation-link:active {
+}
+
+/*MAIN MENU*/
 .navigation-bar {
   display: flex;
   flex-direction: row;
@@ -453,8 +502,24 @@ textarea:focus {
   }
 }
 
+@media (min-width: 768px) {
+  /*------------------------*/
+  /* HEADER */
+  /*------------------------*/
+  .mobile-navigation {
+    display: none;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+  /*------------------------*/
+  /* HEADER */
+  /*------------------------*/
+  .navigation-bar {
+    display: none;
+  }
+
   .slide-image {
     height: 500px;
     overflow: hidden;

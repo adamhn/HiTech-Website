@@ -2,6 +2,8 @@
   //
   // Variables
   //
+  let mobileNavigationIcon = document.querySelector(".mobile-navigation-icon");
+
   let prevEl = document.querySelector(".prev");
   let nextEl = document.querySelector(".next");
   let playIcon = document.querySelector(".play-icon");
@@ -37,6 +39,16 @@
     // Calling show slides initially to present the first slider
     continueSlider();
     randomiseSkillsProgress();
+    readDataLocalStorage();
+  }
+
+  function toggleMobileNavLinks() {
+    var linksEl = document.querySelector(".mobile-navigation-links");
+    if (linksEl.style.display === "block") {
+      linksEl.style.display = "none";
+    } else {
+      linksEl.style.display = "block";
+    }
   }
 
   // Shows a slide at a given index from the DOM elements with class name slide
@@ -111,6 +123,22 @@
     });
   }
 
+  // a function that checks if we have data in localStorage
+  // and output the json value to elements
+  function readDataLocalStorage() {
+    if (
+      localStorage.nameField &&
+      localStorage.emailField &&
+      localStorage.telField &&
+      localStorage.textareaInput
+    ) {
+      nameField.value = localStorage.nameField;
+      emailField.value = localStorage.emailField;
+      telField.value = localStorage.telField;
+      textareaInput.value = localStorage.textareaInput;
+    }
+  }
+
   // Form Submit Handler
   function formSubmitHandler(e) {
     e.preventDefault();
@@ -122,12 +150,17 @@
       validatePhone(telField.value) &&
       isTextareaEmpty(textareaInput.value)
     ) {
-      console.log("Formuläret är validerat");
+      // Save form data as JSON
+      localStorage.setItem("nameField", nameField.value);
+      localStorage.setItem("emailField", emailField.value);
+      localStorage.setItem("telField", telField.value);
+      localStorage.setItem("textareaInput", textareaInput.value);
 
-      console.log(nameField.value);
-      console.log(emailField.value);
-      console.log(telField.value);
-      console.log(textareaInput.value);
+      nameField.value = "";
+      emailField.value = "";
+      telField.value = "";
+      textareaInput.value = "";
+      alert("Ditt formulär har sparat i JSON format på localStorage.");
     }
   }
 
@@ -181,6 +214,8 @@
   //
   // Inits & Event Listeners
   //
+  mobileNavigationIcon.addEventListener("click", toggleMobileNavLinks);
+
   prevEl.addEventListener("click", () => {
     nextPrevSlider(true);
   });
